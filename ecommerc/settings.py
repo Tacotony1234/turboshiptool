@@ -106,9 +106,7 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-django_heroku.settings(locals())
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -117,3 +115,8 @@ LOGIN_REDIRECT_URL = '/'
 STRIPE_PUBLIC_KEY = 'pk_test_51P7GoL056asfOfvgTeOwOaKJ1FlTSPpGyNFdiT0DecQmfHWEyNnck3rtXkSKJAdFfEddQYRZaqgZb16EgYjZyDas00uEr9uZeU'
 
 STRIPE_SECRET_KEY = 'sk_test_51P7GoL056asfOfvgzZu2elbnE1qYJJcTGxECNqAVocWrwkttlw3bLElx77eIJes6BK65AlU8jIoQV6FTsgj6B8lx00ieVVgoTS'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+django_heroku.settings(locals())
